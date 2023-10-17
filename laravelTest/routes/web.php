@@ -26,4 +26,4 @@ Route::get('/a-propos',[About::class,'about'])->name('about');
 Route::get('/contact/{num}/me/{text}',[Contact::class,'contact'])->name('contact');
 Route::get('/users', [UserController::class,'listeUsers'])->name('users');
 Route::resource('/articles',ArticleController::class);
-Route::resource('/produits',ProduitControler::class);
+Route::resource('/produits',ProduitControler::class)->middleware('message');

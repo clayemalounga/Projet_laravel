@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ProduitControler extends Controller
 {
+    public function __construct(){
+        $this->middleware(\App\Http\Middleware\VerifyCsrfToken::class);
+    }
     /**
      * Display a listing of the resource.
      */

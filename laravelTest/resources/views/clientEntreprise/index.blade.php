@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container mt-4 col-md-6">
+@extends('layouts.main')
+@section('content')
+<div class="container mt-4 jumbottron">
         @if($success = Session::get('succes'))
-            <h3 class="alert alert-warning">{{$success}}</h3>
+            <h3 class="alert alert-warning mt-3">{{$success}}</h3>
         @endif
-        <H2 class="mb-3">Liste des clients qui travaillent dans des entreprises</H2>
+        <H2 class="mb-3 bg-success text-light p-3">Liste des clients qui travaillent dans des entreprises</H2>
 
         <table class="table table-bordered table-hover table-striped">
             <thead>
@@ -47,6 +39,4 @@
             </tbody>
         </table>
     </div>
-</body>
-
-</html>
+@endsection
